@@ -1,3 +1,0 @@
- - HTML is a markup language that defines the structure of a web page. It is interpreted by your web browser (Safari, Google Chrome, Firefox, etc.) in order to display content on your screen.
- - Let’s get started by writing a simple HTML file!
- - 
