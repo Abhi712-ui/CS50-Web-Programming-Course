@@ -4,26 +4,22 @@
 <head>
     <title>Colors</title>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('#Red').onclick = function() {
-                document.querySelector('#Colors').style.color = 'red';
-            }
-            document.querySelector('#Blue').onclick = function() {
-                document.querySelector('#Colors').style.color = 'blue';
-            }
-            document.querySelector('#Green').onclick = function() {
-                document.querySelector('#Colors').style.color = 'green';
-            }
-        })
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('select').onchange = () => {
+                document.querySelector('#hello').style = this.value;
+            };
+        });
     </script>
 </head>
 
 <body>
-    <h1 id="Colors">Colors</h1>
-    <button data-color="red">Red</button>
-    <button data-color="blue">Blue</button>
-    <button data-color="green">Green</button>
-
+    <h1 id="hello">Hello! :D</h1>
+    <select id="selection">
+        <option data-color="black">Black</option>
+        <option data-color="red">Red</option>
+        <option data-color="blue">Blue</option>
+        <option data-color="green">Green</option>
+    </select>
 </body>
 
 </html>
