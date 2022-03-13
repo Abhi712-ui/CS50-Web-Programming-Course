@@ -1,3 +1,7 @@
+if (!localStorage.getItem('counter')) {
+
+}
+
 let counter = 0;
 
 function count() {
@@ -5,10 +9,8 @@ function count() {
     display = document.querySelector('h1');
     display.innerHTML = counter;
 
-    if (counter % 10 === 0) {
-        alert(`You have reached ${counter}`)
-    }
 }
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('button').onclick = count;
+    setInterval(count, 1000);
 });
