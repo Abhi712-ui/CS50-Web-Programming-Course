@@ -1,16 +1,17 @@
 if (!localStorage.getItem('counter')) {
-
+    localStorage.setItem('counter', 0);
 }
 
-let counter = 0;
+let counter = localStorage.getItem('counter');
 
 function count() {
-    counter += 1;
+    counter++;
     display = document.querySelector('h1');
     display.innerHTML = counter;
+    localStorage.setItem('counter', counter);
 
 }
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('button').onclick = count;
-    setInterval(count, 1000);
+    document.querySelector('h1').innerHTML = localStorage.getItem('counter')
 });
